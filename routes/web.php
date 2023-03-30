@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('Client.home');
+});
+
+Route::prefix('panel')->name('panel.')->group(function (){
+
+    Route::get('/',function (){
+       return view('Admin.panel');
+    });
+
 });
